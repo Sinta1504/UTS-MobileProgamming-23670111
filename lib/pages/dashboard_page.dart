@@ -9,15 +9,22 @@ class DashboardPage extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.pinkAccent,
         title: const Text('Dashboard'),
-        actions: const [Padding(padding: EdgeInsets.only(right: 16), child: Icon(Icons.notifications))],
+        actions: const [
+          Padding(
+            padding: EdgeInsets.only(right: 16),
+            child: Icon(Icons.notifications),
+          ),
+        ],
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
             Image.asset("images/banner.jpg"),
             const SizedBox(height: 16),
-            const Text('Selamat Datang, Sinta 🌸',
-                style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold)),
+            const Text(
+              'Selamat Datang, Sinta Florist 🌸',
+              style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+            ),
             const SizedBox(height: 16),
             GridView.count(
               crossAxisCount: 3,
@@ -25,7 +32,12 @@ class DashboardPage extends StatelessWidget {
               physics: const NeverScrollableScrollPhysics(),
               children: [
                 _menuItem(context, Icons.person, 'Profil', '/profile'),
-                _menuItem(context, Icons.local_florist, 'Daftar Bunga', '/daftar_bunga'),
+                _menuItem(
+                  context,
+                  Icons.local_florist,
+                  'Daftar Bunga',
+                  '/daftar_bunga',
+                ),
                 _menuItem(context, Icons.store, 'Profil Toko', '/profil_toko'),
               ],
             ),
@@ -35,7 +47,12 @@ class DashboardPage extends StatelessWidget {
     );
   }
 
-  Widget _menuItem(BuildContext context, IconData icon, String title, String route) {
+  Widget _menuItem(
+    BuildContext context,
+    IconData icon,
+    String title,
+    String route,
+  ) {
     return InkWell(
       onTap: () => Navigator.pushNamed(context, route),
       child: Column(
