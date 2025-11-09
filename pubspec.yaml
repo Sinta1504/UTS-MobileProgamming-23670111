@@ -1,0 +1,26 @@
+name: sinta_florist
+description: Aplikasi Sinta Florist untuk tugas UI Flutter
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.19.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/login_bg.png  # <-- SESUAIKAN DENGAN FILE FISIK ANDA
+    - assets/images/banner.jpg
+    - assets/images/profile.jpg
+    - assets/images/avatar.jpg   # <-- SESUAIKAN DENGAN FILE FISIK ANDA
